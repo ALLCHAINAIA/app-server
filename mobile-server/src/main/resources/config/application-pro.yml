@@ -1,0 +1,46 @@
+spring: 
+ profiles: pro
+ 
+ datasource: 
+
+  username: postgres
+  password: postgres123
+  max-idle: 10
+  max-wait: 10000
+  min-idle: 5
+  maximum-pool-size: 30
+  max-active: 15
+ 
+ redis:
+   host: 192.169.216.179
+   port: 6379
+   password: redis123
+   database: 2
+   timeout: 0
+   pool: 
+    max-idle: 8
+    min-idle: 0
+    max-active: 8
+    max-wait: -1
+   redisServiceName: springStringRedisCache  
+   connectRedis: /redis/connect-redis-dev.properties
+  
+roywise: 
+ mobile:
+  tokenExpiration: 120                
+  tokenSaveRedis: false                     
+  mySecret: CPPb3It+G92OGge+tyA707wfJRAZAgMBAAECgYB7du3pcZFlhDJ5sEmtJLw/8XKXzjHY80vE3tKegQ== 
+  interceptorName: mobileAuthInterceptor    
+
+ localUpload:
+  basePath: /roywise/data/costume-resouce
+  nginxMapping : /costume-resouce
+  maxFileSize: 104857600 #100M
+  
+server:
+ port: 17070
+ context-path: /costume-mobile-server
+  
+  
+ 
+ 

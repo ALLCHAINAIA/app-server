@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>costume-server</artifactId>
+        <groupId>com.roywise</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <properties>
+        <packaging>jar</packaging>
+        <start-class>com.roywise.costume.mobile.Application</start-class>
+        <roywise.module.version>1.0.0</roywise.module.version>
+    </properties>
+
+    <artifactId>mobile-server</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.roywise</groupId>
+            <artifactId>rwcm-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.roywise</groupId>
+            <artifactId>wm-comm</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.roywise</groupId>
+            <artifactId>costume-business</artifactId>
+        </dependency>
+    </dependencies>
+
+
+</project>

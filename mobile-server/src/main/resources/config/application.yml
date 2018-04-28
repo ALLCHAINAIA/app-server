@@ -1,0 +1,64 @@
+﻿server:
+# address: 127.0.0.1
+ servlet-path: /api
+ 
+logging:
+ config: classpath:log4j2.yml
+
+banner:
+ location: classpath:config/banner.txt
+
+spring:
+ main:
+  banner-mode: LOG
+ devtools:
+  restart:
+   enabled: true
+ output:
+  ansi:
+   enabled: always
+ profiles:
+  active: pro
+ 
+ datasource:
+   driverClassName: org.postgresql.Driver
+   type: com.alibaba.druid.pool.DruidDataSource
+
+ jackson:
+   time-zone: GMT+8
+
+
+flyway:
+ enabled: false
+ 
+security:
+  user:
+   name: admin
+   password: admin
+   require-ssl: false
+   enable-csrf: false
+  basic:
+     enabled: false
+  management: 
+   security: 
+    enabled: false
+  ignored: true
+  
+endpoints:
+ autoconfig:
+  sensitive: false
+ beans:
+  sensitive: false
+ configprops:
+  sensitive: false
+ dump:
+  sensitive: false
+ env:
+  sensitive: false
+ metrics:
+  sensitive: false
+ mappings:
+  sensitive: false
+ trace:
+  sensitive: false
+
